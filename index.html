@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <title> 蘇姸寧 HW1</title>
+</head>
+
+<!-- body -->
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">HW</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <ul id="pageDiv" >
+          </ul>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- container -->
+  <div class="container">
+    <div class="row ">
+      <div class="container text-center w-75 jumbotron-main" data-aos="fade-down" data-aos-duration="200">
+        <div class="col  p-3">
+          請選擇您所想搜尋的區域: &nbsp;
+          <select id="selectzone" onchange="changespottitle(this.options[this.options.selectedIndex].value)">
+            <option value="全區域景點">全區域景點</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="container text-center w-75 jumbotron-main" data-aos="fade-down" data-aos-duration="200">
+          <div class="row" id="btnselect">
+            <div class=" col py-3">
+              熱門景點:
+            </div>
+            <div class=" col py-3">
+              <button class="btn btn-outline-primary btn-block" value="三民區">三民區</button>
+            </div>
+            <div class=" col py-3">
+              <button class="btn btn-outline-success btn-block" value="左營區">左營區</button>
+            </div>
+            <div class=" col py-3">
+              <button class="btn btn-outline-warning btn-block" value="美濃區">美濃區</button>
+            </div>
+          </div>
+        </div>
+        <div class="btn-toolbar  col mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary" hidden></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center w-75 jumbotron-main" data-aos="fade-down" data-aos-duration="200">
+      您所選擇的是：<h4 id="spottitle"></h4>
+    </div>
+    <div class="container text-center jumbotron-main" data-aos="fade-down" data-aos-duration="200">
+      <h5>該區共有：</h5><h5 id ="spottotal"></h5><h5>處景點</h5>
+    </div>
+    <div class="container text-center w-100 jumbotron-main p-3" data-aos="fade-down" data-aos-duration="200"></div>
+    <div class="row" id="allthings"></div>
+    </div>
+  </div>
+  </div>
+   <!-- footer -->
+   <footer>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
+</html>
